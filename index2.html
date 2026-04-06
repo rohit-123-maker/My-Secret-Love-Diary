@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My Secret Love Diary 🔒</title>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="website-icon" type="img/jpg" href="anime-girl.jpg" />
+
+</head>
+<body>
+
+<!-- BLOBS -->
+<div class="blob" style="top:10%;left:10%"></div>
+<div class="blob" style="bottom:10%;right:10%"></div>
+
+<!-- Welcome Popup on Page Load -->
+    <div class="popup" id="welcome-modal">
+        <div class="popup-content">
+            <h1 style="margin-top: 0;">Welcome! 🤗</h1>
+            <p>Enjoy your secret collection of your wonderful and beautiful memories in Love Diary.</p>
+            <button class="popup-btn" onclick="closePopup('welcome-modal')">Let's Go!</button>
+        </div>
+    </div>
+
+<!-- THEME -->
+<div class="theme-toggle" id="theme-btn" onclick="toggleTheme()">🌙</div>
+<!-- Exit -->
+<div class="exit-btn"><a class="link-btn" href="chrome://dino/" target="_blank" onclick="return confirmLeave()">✖️</a>
+    </div>
+<!-- Logo -->
+<div class="container">
+<div class="container-2">
+    <div class="logo">
+    <h2 style="border: red; font-family: cursive;"><span>M</span><span>y</span>&nbsp;<span>S</span><span>e</span><span>c</span><span>r</span><span>e</span><span>t</span>&nbsp;<span>L</span><span>o</span><span>v</span><span>e</span>&nbsp;<span>D</span><span>i</span><span>a</span><span>r</span><span>y</span><span>🔒</span>
+        </h2>
+    </div>
+
+    <textarea id="diaryInput" placeholder="Tell me I love you 💕 today or write your heart's feelings here on my heart..."></textarea>
+
+    <div class="button-group">
+        <button class="btn-save" onclick="saveEntry()">Save Entry ✨</button>
+        <button class="btn-view" onclick="showPasswordModal()">Show My Memories 📖</button>
+    </div>
+
+    <p id="status"></p>
+
+    <div id="entriesDisplay" class="entries-container">
+        <h3 style="color: var(--primary-love); display: flex; justify-content: space-between; align-items: center;">
+            Old Memories
+            <button onclick="closeEntries()" style="font-size: 0.8rem; padding: 5px 10px; background: #eee; color: #666; border-radius: 5px; width: auto; flex: none;">Close</button>
+        </h3>
+        <div id="entriesList"></div>
+    </div>
+
+    <div class="footer-note">
+        Everything For You 🥰🤗🥰<br>
+        And Anything For You 💞😘💞
+    </div>
+    <marquee style="border: red; font-family: cursive;">    <div class="logo">
+        <h2><span>M</span><span>y</span>&nbsp;<span>S</span><span>e</span><span>c</span><span>r</span><span>e</span><span>t</span>&nbsp;<span>L</span><span>o</span><span>v</span><span>e</span>&nbsp;<span>D</span><span>i</span><span>a</span><span>r</span><span>y</span><span>🔒</span>
+        </h2>
+    </div></marquee>
+</div>
+</div>
+<!-- Custom Password Modal -->
+<div id="passwordModal" class="modal">
+    <div class="modal-content">
+        <h4>🔒 Secret Access</h4>
+        <p style="font-size: 0.85rem; color: #666;">Enter the password of your love to open the diary.</p>
+        <input type="password" id="passInput" placeholder="••••••••">
+        <div style="display: flex; gap: 10px;">
+            <button onclick="closeModal()" style="background: #eee; color: #666; flex: 1;">Cancel</button>
+            <button onclick="verifyPassword()" class="btn-save" style="flex: 2; color: black;">Unlock</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

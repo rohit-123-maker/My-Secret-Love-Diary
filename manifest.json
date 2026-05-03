@@ -7,12 +7,12 @@
   "theme_color": "#ff4d6d",
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "https://raw.githubusercontent.com/rohit-123-maker/My-Secret-Love-Diary/main/1777821166342.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "https://raw.githubusercontent.com/rohit-123-maker/My-Secret-Love-Diary/main/1777821166342.png",
       "sizes": "512x512",
       "type": "image/png"
     }
